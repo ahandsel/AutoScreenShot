@@ -1,6 +1,5 @@
 tell application "System Events"
 	set dFolder to "~/Desktop/screencapture/"
-	
 	do shell script ("mkdir -p " & dFolder)
 	
 	set i to 0
