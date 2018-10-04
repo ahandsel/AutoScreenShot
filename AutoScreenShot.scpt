@@ -54,6 +54,10 @@ Configure your screen as you want it to be captured."
 	
 	delay 10
 	
+	set task_time to Page_Count * 4
+	
+	do shell script ("caffeinate -t " & task_time & " &")
+	
 	set i to 1
 	repeat Page_Count times
 		do shell script ("screencapture " & dFolder & Book_Title & "-" & i & ".png")
