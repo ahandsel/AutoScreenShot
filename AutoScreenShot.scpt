@@ -9,7 +9,7 @@ tell application "System Events"
 Input the NEXT button's coordinates.
 
 Input format: x, y
-Example: 1301, 63
+Example: 1306, 20
 
 **If you are unsure the NEXT button's location, hover over the button & press Shift-Command (⌘)-4. Use the coordinates that displays."
 	
@@ -49,14 +49,11 @@ Example: 1301, 63
 	
 	set theDialogText to "
 Auto ScreenShot will be start in 10 seconds. 
-Configure your screen as you want it to be captured."
+Configure your screen as you want it to be captured.
+Be sure to set your Mac settings to prevent it from sleeping!"
 	display dialog theDialogText
 	
 	delay 10
-	
-	set task_time to Page_Count * 4
-	
-	do shell script ("caffeinate -t " & task_time & " &")
 	
 	set i to 1
 	repeat Page_Count times
